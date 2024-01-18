@@ -1,0 +1,35 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "world_of_whimsy:item/butterfly_dart",
+		"particle": "world_of_whimsy:item/butterfly_dart"
+	},
+	"elements": [
+		{
+			"from": [4.5, 8, 2],
+			"to": [11.5, 8, 14],
+			"faces": {
+				"north": {"uv": [0, 0, 7, 0], "texture": "#0"},
+				"east": {"uv": [0, 0, 5, 0], "texture": "#0"},
+				"south": {"uv": [0, 0, 7, 0], "texture": "#0"},
+				"west": {"uv": [0, 0, 5, 0], "texture": "#0"},
+				"up": {"uv": [7, 10, 0, 0], "texture": "#0"},
+				"down": {"uv": [7, 0, 0, 10], "texture": "#0"}
+			}
+		},
+		{
+			"from": [8, 4.5, 2],
+			"to": [8, 11.5, 13],
+			"rotation": {"angle": 0, "axis": "z", "origin": [8, 8, 10.5]},
+			"faces": {
+				"north": {"uv": [0, 0, 7, 0], "rotation": 270, "texture": "#missing"},
+				"east": {"uv": [0, 0, 7, 11], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [0, 0, 7, 0], "rotation": 90, "texture": "#missing"},
+				"west": {"uv": [0, 0, 7, 11], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [0, 0, 11, 0], "rotation": 90, "texture": "#missing"},
+				"down": {"uv": [0, 0, 11, 0], "rotation": 90, "texture": "#missing"}
+			}
+		}
+	],
+	"display": {}
+}

@@ -16,13 +16,23 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+
+	/*           LIB MODS               */
+	maven {
+		name = 'GeckoLib'
+		url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+	}
+
+
+
+
 }
 
 loom {
 	// Loom and Loader both use this block in order to gather more information about your mod.
 	mods {
 		// This should match your mod id.
-		"example_mod" {
+		"world_of_whimsy" {
 			// Tell Loom about each source set used by your mod here. This ensures that your mod's classes are properly transformed by Loader.
 			sourceSet("main")
 			// If you shade (directly include classes, not JiJ) a dependency into your mod, include it here using one of these methods:
@@ -45,11 +55,12 @@ dependencies {
 	}
 	*/
 	modImplementation libs.quilt.loader
-
-	// QSL is not a complete API; You will need Quilted Fabric API to fill in the gaps.
-	// Quilted Fabric API will automatically pull in the correct QSL version.
 	modImplementation libs.quilted.fabric.api
 	// modImplementation libs.bundles.quilted.fabric.api // If you wish to use Fabric API's deprecated modules, you can replace the above line with this one
+
+	/*         LIB MODS       */
+
+	//modImplementation 'software.bernie.geckolib:geckolib-fabric-1.20.1:4.2.2'
 }
 
 processResources {
@@ -91,6 +102,10 @@ jar {
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
+			groupId = 'net.muffinz'
+			artifactId = 'world_of_whimsy'
+			version = '1.0'
+
 			from components.java
 		}
 	}
